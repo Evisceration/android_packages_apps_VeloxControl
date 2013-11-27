@@ -72,14 +72,12 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
     private static final String WALLPAPER_NAME_LANDSCAPE = "notification_wallpaper_landscape.jpg";
 
     private ContentResolver mResolver;
-    private Activity mActivity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mResolver = getContentResolver();
-        mActivity = this;
 
         addPreferencesFromResource(R.xml.notification_bg_pref);
 
@@ -94,10 +92,10 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
 
         float wallpaperTransparency;
         try {
-            wallpaperTransparency = Settings.System.getFloat(getContentResolver(), Settings.System.NOTIF_WALLPAPER_ALPHA);
+            wallpaperTransparency = Settings.System.getFloat(mResolver, Settings.System.NOTIF_WALLPAPER_ALPHA);
         } catch (Exception e) {
             wallpaperTransparency = 0;
-            Settings.System.putFloat(getContentResolver(), Settings.System.NOTIF_WALLPAPER_ALPHA, 0.1f);
+            Settings.System.putFloat(mResolver, Settings.System.NOTIF_WALLPAPER_ALPHA, 0.1f);
         }
         mWallpaperAlpha = (SeekBarPreference) findPreference(PREF_NOTIFICATION_WALLPAPER_ALPHA);
         mWallpaperAlpha.setInitValue((int) (wallpaperTransparency * 100));
@@ -106,10 +104,10 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
 
         float notifTransparency;
         try {
-            notifTransparency = Settings.System.getFloat(getContentResolver(), Settings.System.NOTIF_ALPHA);
+            notifTransparency = Settings.System.getFloat(mResolver, Settings.System.NOTIF_ALPHA);
         } catch (Exception e) {
             notifTransparency = 0;
-            Settings.System.putFloat(getContentResolver(), Settings.System.NOTIF_ALPHA, 0);
+            Settings.System.putFloat(mResolver, Settings.System.NOTIF_ALPHA, 0);
         }
         mNotifAlpha = (SeekBarPreference) findPreference(PREF_NOTIFICATION_ALPHA);
         mNotifAlpha.setInitValue((int) (notifTransparency * 100));
@@ -132,7 +130,7 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
 
     private void updateCustomBackgroundSummary() {
         int resId;
-        String value = Settings.System.getString(getContentResolver(),
+        String value = Settings.System.getString(mResolver,
                 Settings.System.NOTIFICATION_BACKGROUND);
         if (value == null) {
             resId = R.string.notification_background_default_wallpaper;
@@ -145,7 +143,7 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
         }
         mNotificationWallpaper.setSummary(getResources().getString(resId));
 
-        value = Settings.System.getString(getContentResolver(),
+        value = Settings.System.getString(mResolver,
                 Settings.System.NOTIFICATION_BACKGROUND_LANDSCAPE);
         if (value == null) {
             resId = R.string.notification_background_default_wallpaper;
@@ -170,26 +168,26 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
         }
 
         if (orientation) {
-            Settings.System.putString(getContentResolver(),
+            Settings.System.putString(mResolver,
                     Settings.System.NOTIFICATION_BACKGROUND_LANDSCAPE, null);
         }
     }
 
     public void observerResourceHelper() {
         float helper;
-        float first = Settings.System.getFloat(getContentResolver(),
+        float first = Settings.System.getFloat(mResolver,
                 Settings.System.NOTIF_WALLPAPER_ALPHA, 0.1f);
         if (first < 0.9f) {
             helper = first + 0.1f;
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.NOTIF_WALLPAPER_ALPHA, helper);
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.NOTIF_WALLPAPER_ALPHA, first);
         } else {
             helper = first - 0.1f;
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.NOTIF_WALLPAPER_ALPHA, helper);
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.NOTIF_WALLPAPER_ALPHA, first);
         }
     }
@@ -198,7 +196,7 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == REQUEST_PICK_WALLPAPER) {
                 FileOutputStream wallpaperStream = null;
-                Settings.System.putString(getContentResolver(),
+                Settings.System.putString(mResolver,
                         Settings.System.NOTIFICATION_BACKGROUND, "");
                 try {
                     wallpaperStream = getApplicationContext().openFileOutput(WALLPAPER_NAME,
@@ -213,7 +211,7 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
                 }
             } else if (requestCode == REQUEST_PICK_WALLPAPER_LANDSCAPE) {
                 FileOutputStream wallpaperStream = null;
-                Settings.System.putString(getContentResolver(),
+                Settings.System.putString(mResolver,
                         Settings.System.NOTIFICATION_BACKGROUND_LANDSCAPE, "");
                 try {
                     wallpaperStream = getApplicationContext().openFileOutput(WALLPAPER_NAME_LANDSCAPE,
@@ -290,12 +288,12 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mWallpaperAlpha) {
             float valNav = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.NOTIF_WALLPAPER_ALPHA, valNav / 100);
             return true;
         } else if (preference == mNotifAlpha) {
             float valNav = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(getContentResolver(),
+            Settings.System.putFloat(mResolver,
                     Settings.System.NOTIF_ALPHA, valNav / 100);
             return true;
         } else if (preference == mNotificationWallpaper) {
@@ -336,7 +334,7 @@ public class NotificationDrawerStyle extends PreferenceActivity implements
                     break;
                 //Sets background to default
                 case 1:
-                    Settings.System.putString(getContentResolver(),
+                    Settings.System.putString(mResolver,
                             Settings.System.NOTIFICATION_BACKGROUND, null);
                     deleteWallpaper(false);
                     deleteWallpaper(true);

@@ -1,7 +1,6 @@
 package net.openfiretechnologies.veloxcontrol.fragments.appearance;
 
 import android.content.ContentResolver;
-import android.content.Context;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -67,7 +66,6 @@ public class Animations extends PreferenceFragment implements Preference.OnPrefe
     private String[] mAnimationsStrings;
     private String[] mAnimationsNum;
 
-    private Context mContext;
     private ContentResolver resolver;
 
 
@@ -77,7 +75,6 @@ public class Animations extends PreferenceFragment implements Preference.OnPrefe
 
         addPreferencesFromResource(R.xml.alex_appearance_animations);
         PreferenceScreen prefSet = getPreferenceScreen();
-        mContext = getActivity();
         resolver = getActivity().getContentResolver();
 
         /* System Animations */
@@ -86,7 +83,8 @@ public class Animations extends PreferenceFragment implements Preference.OnPrefe
         mAnimationsStrings = new String[animqty];
         mAnimationsNum = new String[animqty];
         for (int i = 0; i < animqty; i++) {
-            mAnimationsStrings[i] = AwesomeAnimationHelper.getProperName(mContext, mAnimations[i]);
+            mAnimationsStrings[i] = AwesomeAnimationHelper.getProperName(
+                    getActivity(), mAnimations[i]);
             mAnimationsNum[i] = String.valueOf(mAnimations[i]);
         }
 

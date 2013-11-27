@@ -4,7 +4,6 @@
 
 package net.openfiretechnologies.veloxcontrol.util;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.PowerManager;
 
@@ -12,8 +11,6 @@ public abstract class WakeLocker {
 
     private static PowerManager.WakeLock wakeLock;
 
-    @SuppressLint("Wakelock")
-    @SuppressWarnings("deprecation")
     public static void acquireFull(Context context) {
         if (wakeLock != null) {
             wakeLock.release();

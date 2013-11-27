@@ -19,20 +19,17 @@ import java.util.List;
 
 public class Tools extends Fragment {
 
-    private CustomPageAdapter mPageAdapter;
-    private PagerTabStrip mPagerTabStrip;
-
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
 
         View v = layoutInflater.inflate(R.layout.fragment_tools, viewGroup, false);
 
-        mPageAdapter = new CustomPageAdapter(getChildFragmentManager(), getFragments(), getTitles());
+        CustomPageAdapter mPageAdapter = new CustomPageAdapter(getChildFragmentManager(), getFragments(), getTitles());
 
         ViewPager mViewPager = (ViewPager) v.findViewById(R.id.tools_viewpager);
         mViewPager.setAdapter(mPageAdapter);
 
-        mPagerTabStrip = (PagerTabStrip) v.findViewById(R.id.tools_pagerTabStrip);
+        PagerTabStrip mPagerTabStrip = (PagerTabStrip) v.findViewById(R.id.tools_pagerTabStrip);
         mPagerTabStrip.setBackgroundColor(getResources().getColor(R.color.grey_dark));
         mPagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.red_dark));
         mPagerTabStrip.setDrawFullUnderline(true);

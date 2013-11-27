@@ -21,9 +21,6 @@ import java.util.List;
 
 public class Appearance extends Fragment {
 
-    private CustomPageAdapter mPageAdapter;
-    private PagerTabStrip mPagerTabStrip;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +31,12 @@ public class Appearance extends Fragment {
 
         View v = layoutInflater.inflate(R.layout.fragment_appearance, viewGroup, false);
 
-        mPageAdapter = new CustomPageAdapter(getChildFragmentManager(), getFragments(), getTitles());
+        CustomPageAdapter mPageAdapter = new CustomPageAdapter(getChildFragmentManager(), getFragments(), getTitles());
 
         ViewPager mViewPager = (ViewPager) v.findViewById(R.id.appearance_viewpager);
         mViewPager.setAdapter(mPageAdapter);
 
-        mPagerTabStrip = (PagerTabStrip) v.findViewById(R.id.appearance_pagerTabStrip);
+        PagerTabStrip mPagerTabStrip = (PagerTabStrip) v.findViewById(R.id.appearance_pagerTabStrip);
         mPagerTabStrip.setBackgroundColor(getResources().getColor(R.color.grey_dark));
         mPagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.red_dark));
         mPagerTabStrip.setDrawFullUnderline(true);

@@ -1,8 +1,10 @@
 package net.openfiretechnologies.veloxcontrol;
 
 import android.app.ActionBar;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -38,7 +40,6 @@ public class MainMenu extends FragmentActivity implements
     PreferenceHelper prefs;
     private Toast mToast;
     private boolean mDebug = false;
-    private boolean mIsVelox = false;
     private boolean mDoublePress = true;
     private static long back_pressed;
     private Toast t;
@@ -53,9 +54,19 @@ public class MainMenu extends FragmentActivity implements
         mDebug = prefs.getBoolean(VC_EXTENSIVE_LOGGING);
         mDoublePress = prefs.getBoolean(VC_DOUBLE_PRESS_END);
         logDebug("Extensive Logging Enabled!");
-        mIsVelox = VeloxMethods.isVelox(mDebug);
+        boolean mIsVelox = VeloxMethods.isVelox(mDebug);
         logDebug("Is Velox: " + (mIsVelox ? "true" : "false"));
         logDebug("MODEL: " + Build.MODEL);
+
+        if (!mIsVelox) {
+            ComponentName component = new ComponentName("net.openfiretechnologies.veloxcontrol",
+                    "net.openfiretechnologies.veloxcontrol.activities._DummyLauncher");
+            PackageManager mPm = getPackageManager();
+            if (mPm != null)
+                mPm.setComponentEnabledSetting(component,
+                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                        PackageManager.DONT_KILL_APP);
+        }
 
         try {
             if (!VeloxMethods.checkDirectories()) {

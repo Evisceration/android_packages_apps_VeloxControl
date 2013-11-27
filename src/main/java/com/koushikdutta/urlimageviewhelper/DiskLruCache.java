@@ -16,6 +16,8 @@
 
 package com.koushikdutta.urlimageviewhelper;
 
+import android.util.Log;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.Closeable;
@@ -304,7 +306,7 @@ public final class DiskLruCache implements Closeable {
                 cache.journalWriter = new BufferedWriter(new FileWriter(cache.journalFile, true));
                 return cache;
             } catch (IOException journalIsCorrupt) {
-                System.out.println("DiskLruCache " + directory + " is corrupt: "
+                Log.e("DISKLRUCACHE", "DiskLruCache " + directory + " is corrupt: "
                         + journalIsCorrupt.getMessage() + ", removing");
                 cache.delete();
             }

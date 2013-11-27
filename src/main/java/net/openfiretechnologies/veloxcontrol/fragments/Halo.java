@@ -25,7 +25,6 @@ public class Halo extends PreferenceFragment implements Preference.OnPreferenceC
 
     private Context mContext;
     private ContentResolver resolver;
-    private PreferenceHelper mPrefs;
     private boolean mDebug = false;
     private Handler mHandler;
     private boolean mAutoBackup = false;
@@ -67,7 +66,7 @@ public class Halo extends PreferenceFragment implements Preference.OnPreferenceC
 
         mContext = getActivity();
         resolver = getActivity().getContentResolver();
-        mPrefs = new PreferenceHelper(mContext);
+        PreferenceHelper mPrefs = new PreferenceHelper(mContext);
 
         mDebug = mPrefs.getBoolean(VC_EXTENSIVE_LOGGING);
 

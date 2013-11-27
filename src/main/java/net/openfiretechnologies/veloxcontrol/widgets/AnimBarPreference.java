@@ -51,7 +51,6 @@ public class AnimBarPreference extends Preference
 
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
-        // TODO Auto-generated method stub
         return super.onGetDefaultValue(a, index);
     }
 

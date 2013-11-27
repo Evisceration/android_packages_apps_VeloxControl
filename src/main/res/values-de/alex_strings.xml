@@ -6,12 +6,12 @@
 
     <!-- General Strings -->
     <string name="about_title">Über</string>
-    <string name="about_developer">Velox - Nameless\n\nEntwickelt von:\n\t\tOpenFire Technologies\n\n
+    <string name="about_developer">Velox - Nameless\n\nEntwickelt von:\nOpenFire Technologies\n\n
     </string>
-    <string name="velox_about_build_on">Mit Liebe erstellt auf:\n\t\t</string>
-    <string name="velox_about_build_by">Erstellt von:\n\t\t</string>
-    <string name="velox_about_build_number">Build Version:\n\t\t</string>
-    <string name="velox_about_apk_build_number">APK Version:\n\t\t</string>
+    <string name="velox_about_build_on">Mit Liebe erstellt auf:\n</string>
+    <string name="velox_about_build_by">Erstellt von:\n</string>
+    <string name="velox_about_build_number">Build Version:\n</string>
+    <string name="velox_about_apk_build_number">APK Version:\n</string>
 
     <!-- Settings ALEX -->
     <string name="header_category_alex_romextras">ROM Extras</string>

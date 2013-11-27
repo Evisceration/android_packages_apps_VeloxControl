@@ -79,7 +79,6 @@ public class ActiveDisplaySettings extends PreferenceFragment implements
 
     private Context mContext;
     private ContentResolver resolver;
-    private PreferenceHelper preferenceHelper;
     private Handler mHandler;
     private boolean mAutoBackup = false;
     private boolean mDebug = false;
@@ -93,7 +92,7 @@ public class ActiveDisplaySettings extends PreferenceFragment implements
 
         mContext = getActivity();
         resolver = mContext.getContentResolver();
-        preferenceHelper = new PreferenceHelper(getActivity());
+        PreferenceHelper preferenceHelper = new PreferenceHelper(getActivity());
         mDebug = preferenceHelper.getBoolean(VC_EXTENSIVE_LOGGING);
 
         if (preferenceHelper.getBoolean(PREF_AUTOBACKUP_ENABLED)) {

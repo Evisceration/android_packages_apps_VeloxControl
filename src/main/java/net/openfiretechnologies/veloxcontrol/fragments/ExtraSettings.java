@@ -1,7 +1,6 @@
 package net.openfiretechnologies.veloxcontrol.fragments;
 
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -20,20 +19,17 @@ import net.openfiretechnologies.veloxcontrol.util.VeloxMethods;
 import static net.openfiretechnologies.veloxcontrol.util.VeloxConstants.VC_EXTENSIVE_LOGGING;
 import static net.openfiretechnologies.veloxcontrol.util.VeloxConstants.VC_OS_DISABLE_SELINUX;
 
-public class ExtraSettings extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class ExtraSettings extends PreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String USE_HIGHEND_GFX = "velox.highend.gfx";
     private static final String USE_HIGHEND_GFX_PREF = "use_highend_gfx";
     private static final String ALEX_BUILD_PROP = "alex_extra_build_prop";
 
-    private Context mContext;
     private PreferenceHelper preferenceHelper;
     private PackageManager mPm;
     private boolean mIsVelox = false;
-    private boolean mDebug = false;
 
-    private PreferenceGroup mBuildProps;
-    private CheckBoxPreference mUseHighendGfx;
     private SwitchPreference mVcExtensiveLogging;
     private Preference mDynamicChangelog;
     private SwitchPreference mVcLauncherDisable;
@@ -45,14 +41,14 @@ public class ExtraSettings extends PreferenceFragment implements Preference.OnPr
 
         addPreferencesFromResource(R.xml.alex_extra_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
-        mContext = getActivity();
-        preferenceHelper = new PreferenceHelper(mContext);
-        mDebug = preferenceHelper.getBoolean(VC_EXTENSIVE_LOGGING);
+        preferenceHelper = new PreferenceHelper(getActivity());
+        boolean mDebug = preferenceHelper.getBoolean(VC_EXTENSIVE_LOGGING);
         mPm = getActivity().getPackageManager();
         mIsVelox = VeloxMethods.isVelox(mDebug);
 
-        mBuildProps = (PreferenceGroup) prefSet.findPreference(ALEX_BUILD_PROP);
-        mUseHighendGfx = (CheckBoxPreference) prefSet.findPreference(USE_HIGHEND_GFX_PREF);
+        PreferenceGroup mBuildProps = (PreferenceGroup) prefSet.findPreference(ALEX_BUILD_PROP);
+        CheckBoxPreference mUseHighendGfx = (CheckBoxPreference)
+                prefSet.findPreference(USE_HIGHEND_GFX_PREF);
         if (!mIsVelox) {
             prefSet.removePreference(mUseHighendGfx);
             prefSet.removePreference(mBuildProps);
@@ -66,6 +62,7 @@ public class ExtraSettings extends PreferenceFragment implements Preference.OnPr
 
         mVcLauncherDisable = (SwitchPreference) prefSet.findPreference("vc_disable_launcher");
         if (!mIsVelox) {
+            mVcLauncherDisable.setChecked(switchLauncher(false));
             mVcLauncherDisable.setEnabled(false);
         } else {
             mVcLauncherDisable.setChecked(switchLauncher(false));
@@ -113,10 +110,18 @@ public class ExtraSettings extends PreferenceFragment implements Preference.OnPr
 
         ComponentName component = new ComponentName("net.openfiretechnologies.veloxcontrol",
                 "net.openfiretechnologies.veloxcontrol.activities._DummyLauncher");
-        isShowing = ((mPm.getComponentEnabledSetting(component) == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT)
-                || (mPm.getComponentEnabledSetting(component) == PackageManager.COMPONENT_ENABLED_STATE_ENABLED));
+        isShowing = ((mPm.getComponentEnabledSetting(component) ==
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT)
+                || (mPm.getComponentEnabledSetting(component) ==
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED));
 
         if (shouldSwitch) {
+            if (mIsVelox) {
+                mPm.setComponentEnabledSetting(component,
+                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                        PackageManager.DONT_KILL_APP);
+                return true;
+            }
             if (isShowing) {
                 mPm.setComponentEnabledSetting(component,
                         PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
