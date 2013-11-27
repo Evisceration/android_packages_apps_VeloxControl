@@ -1,0 +1,8 @@
+<menu>
+    <!--item
+        android:id="@+id/action_toggle"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_toggle"
+        android:actionLayout="@layout/actionbar_switch" /-->
+</menu>

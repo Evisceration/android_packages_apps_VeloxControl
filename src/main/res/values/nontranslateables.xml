@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Non-Translateables -->
+    <string name="app_name" translateable="false">Velox Control</string>
+    <string name="velox" translateable="false">Velox</string>
+    <string name="active_display" translateable="false">Active Display</string>
+    <string name="halo" translateable="false">Halo</string>
+    <string name="empty_string" translateable="false" />
+
+    <!-- Dummy -->
+    <string name="alex_dummy_title" translateable="false">Dummy Title</string>
+    <string name="alex_dummy_summary" translateable="false">Dummy Summary</string>
+
+    <!-- File Chooser -->
+    <string name="dir_parent" translateable="false">&lt;Parent DIR&gt;</string>
+    <string name="dir" translateable="false">&lt;DIR&gt;</string>
+
+    <!-- Font Tools -->
+    <string name="tools_fonts_robotoregular" translateable="false">Roboto-Regular</string>
+    <string name="tools_fonts_robotobold" translateable="false">Roboto-Bold</string>
+
+    <!-- Flasher Tools -->
+    <string name="tools_flasher_cwm_normal_title" translateable="false">ClockWorkMod - Regular</string>
+    <string name="tools_flasher_cwm_touch_title" translateable="false">ClockWorkMod - Touch</string>
+
+</resources>

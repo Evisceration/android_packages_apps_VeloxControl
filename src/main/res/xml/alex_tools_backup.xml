@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/tools_backup_title">
+
+    <Preference
+        android:title="@string/tools_backup_title"
+        android:summary="@string/tools_backup_extendedsummary"
+        android:selectable="false" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider android:title="@string/empty_string" />
+
+    <ListPreference
+        android:key="alex_tools_backup_restore"
+        android:title="@string/tools_backup_restore_title"
+        android:summary="@string/tools_backup_restore_summary"
+        android:entries="@array/tools_backup_entries_array"
+        android:entryValues="@array/tools_backup_values_array" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider android:title="@string/empty_string" />
+
+    <SwitchPreference
+        android:title="@string/tools_backup_autobackup_title"
+        android:summaryOff="@string/tools_backup_autobackup_off"
+        android:summaryOn="@string/tools_backup_autobackup_on"
+        android:key="alex_tools_backup_autobackup" />
+
+    <MultiSelectListPreference
+        android:title="@string/tools_backup_autobackup_list_title"
+        android:summary="@string/tools_backup_autobackup_list_summary"
+        android:entries="@array/tools_backup_entries_array"
+        android:entryValues="@array/tools_backup_values_array"
+        android:key="alex_tools_backup_autobackup_list"
+        android:dependency="alex_tools_backup_autobackup" />
+
+</PreferenceScreen>

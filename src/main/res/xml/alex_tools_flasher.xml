@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/tools_flasher_title">
+
+    <Preference
+        android:title="@string/tools_flasher_title"
+        android:summary="@string/tools_flasher_summary"
+        android:selectable="false" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider android:title="@string/empty_string" />
+
+    <Preference
+        android:title="@string/tools_flasher_cwm_normal_title"
+        android:key="alex_tools_flasher_cwm_normal" />
+
+    <Preference
+        android:title="@string/tools_flasher_cwm_touch_title"
+        android:key="alex_tools_flasher_cwm_touch" />
+
+</PreferenceScreen>

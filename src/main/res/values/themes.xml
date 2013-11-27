@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="Theme_Dark" parent="Theme.Veloxactionbar">
+        <!--item name="android:listSeparatorTextViewStyle">@style/velox_pref_cat</item-->
+        <!--item name="android:checkBoxPreferenceStyle">@style/velox_checkboxes</item-->
+    </style>
+
+</resources>

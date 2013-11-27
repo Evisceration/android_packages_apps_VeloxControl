@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/alex_graphics_performance_category_title">
+
+    <CheckBoxPreference
+        android:key="pref_use_16bpp_alpha"
+        android:title="@string/pref_use_16bpp_alpha_title"
+        android:summary="@string/pref_use_16bpp_alpha_summary" />
+
+</PreferenceScreen>

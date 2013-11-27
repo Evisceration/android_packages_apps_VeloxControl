@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/alex_extra_settings_title">
+
+    <PreferenceCategory
+        android:key="alex_extra_build_prop"
+        android:title="@string/alex_extra_build_prop_title"
+        android:summary="@string/alex_extra_build_prop_summary" />
+
+    <CheckBoxPreference
+        android:key="use_highend_gfx"
+        android:title="@string/use_highend_gfx_title"
+        android:summary="@string/use_highend_gfx_summary"
+        android:enabled="false" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider />
+
+    <PreferenceCategory
+        android:title="@string/vc_os_title"
+        android:summary="@string/vc_os_summary" />
+
+    <SwitchPreference
+        android:key="vc_os_disable_selinux"
+        android:title="@string/vc_os_disable_selinux_title"
+        android:summaryOn="@string/vc_os_disable_selinux_summary_on"
+        android:summaryOff="@string/vc_os_disable_selinux_summary_off" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider />
+
+    <PreferenceCategory android:title="@string/app_name" />
+
+    <SwitchPreference
+        android:key="vc_extensive_logging"
+        android:title="@string/vc_extensive_logging_title"
+        android:summary="@string/vc_extensive_logging_summary" />
+
+    <CheckBoxPreference
+        android:key="vc_double_press_end"
+        android:title="@string/vc_double_press_end_title"
+        android:summary="@string/vc_double_press_end_summary" />
+
+    <SwitchPreference
+        android:key="vc_disable_launcher"
+        android:title="@string/vc_disable_launcher_title"
+        android:summaryOn="@string/vc_disable_launcher_summary_on"
+        android:summaryOff="@string/vc_disable_launcher_summary_off" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider />
+
+    <Preference
+        android:key="dynamic_changelog"
+        android:title="@string/dynamic_changelog_title"
+        android:summary="@string/dynamic_changelog_summary" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider />
+
+</PreferenceScreen>

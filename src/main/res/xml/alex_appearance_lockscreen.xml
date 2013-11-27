@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/alex_lockscreen_category_title">
+
+    <PreferenceCategory
+        android:key="smart_cover_category"
+        android:title="@string/smart_cover_category_title">
+
+        <CheckBoxPreference
+            android:key="smart_cover_wake"
+            android:title="@string/smart_cover_wake_title"
+            android:summary="@string/smart_cover_wake_summary" />
+
+    </PreferenceCategory>
+
+    <CheckBoxPreference
+        android:key="lockscreen_use_widget_container_carousel"
+        android:title="@string/lockscreen_use_widget_container_carousel_title"
+        android:summary="@string/lockscreen_use_widget_container_carousel_summary" />
+
+    <CheckBoxPreference
+        android:key="battery_around_lockscreen_ring"
+        android:title="@string/battery_around_lockscreen_ring"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:key="status_bar_transparent_on_keyguard"
+        android:title="@string/status_bar_transparent_on_keyguard_title"
+        android:summary="@string/status_bar_transparent_on_keyguard_summary"
+        android:defaultValue="true" />
+
+    <Preference
+        android:key="transparency_dialog"
+        android:title="@string/transparency_dialog_title" />
+
+</PreferenceScreen>

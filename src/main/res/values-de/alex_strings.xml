@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="alex_performance">Leistung</string>
+    <string name="alex_dummy">Placeholder!\n\nContent is coming soon ;)</string>
+
+    <!-- General Strings -->
+    <string name="about_title">Über</string>
+    <string name="about_developer">Velox - Nameless\n\nEntwickelt von:\n\t\tOpenFire Technologies\n\n
+    </string>
+    <string name="velox_about_build_on">Mit Liebe erstellt auf:\n\t\t</string>
+    <string name="velox_about_build_by">Erstellt von:\n\t\t</string>
+    <string name="velox_about_build_number">Build Version:\n\t\t</string>
+    <string name="velox_about_apk_build_number">APK Version:\n\t\t</string>
+
+    <!-- Settings ALEX -->
+    <string name="header_category_alex_romextras">ROM Extras</string>
+    <string name="alex_custom_title">Zusatzfunktionen</string>
+
+    <!-- Appearance ALEX -->
+    <string name="alex_graphics_category_title">@string/general_appearance</string>
+    <string name="alex_graphics_settings_title">@string/alex_graphics_category_title</string>
+    <string name="alex_graphics_performance_category_title">@string/alex_performance</string>
+    <string name="alex_graphics_statusbar_category_title">Statusleiste</string>
+    <string name="alex_statusbar_notifications_title">Benachrichtigungen</string>
+    <string name="use_highend_gfx_title">Highend GFX Effekte</string>
+    <string name="use_highend_gfx_summary">Zum Aktivieren, setze \"velox.highend.gfx=1\"\nZum Deaktivieren, setze \"velox.highend.gfx=0\"
+    </string>
+    <string name="alex_lockscreen_category_title">Sperrbildschirm</string>
+
+    <!-- Extra ALEX -->
+    <string name="perfcntrl">Performance Control</string>
+
+    <!-- Extra Category -->
+    <string name="alex_extra_category_title">Extras</string>
+    <string name="alex_extra_settings_title">@string/alex_extra_category_title</string>
+    <string name="alex_extra_build_prop_title">Build Properties</string>
+    <string name="alex_extra_build_prop_summary">Um diese Werte zu ändern, musst du \"/system/build.prop\" bearbeiten</string>
+
+
+    <!-- Active Display Category -->
+    <string name="alex_activedisplay_category_title">Active Display</string>
+
+    <!-- Active Display -->
+    <string name="ad_settings_title">Active Display</string>
+    <string name="ad_settings_summary">Ändere Active Display Einstellungen</string>
+    <string name="ad_enable_title">Aktivieren</string>
+    <string name="ad_enable_summary_on">Active Display aktiviert</string>
+    <string name="ad_enable_summary_off">Active Display deaktiviert</string>
+    <string name="ad_text_title">Benachrichtigungs Text</string>
+    <string name="ad_text_summary">Den Benachrichtigungs Text um den Ring anzeigen.</string>
+    <string name="ad_all_notifications_title">Alle Benachrichtigungen</string>
+    <string name="ad_all_notifications_summary">Zeige alle Benachrichtigungen, inklusive nicht-löschbare.</string>
+    <string name="ad_hide_low_priority_title">Verstecke Low-Priority</string>
+    <string name="ad_hide_low_priority_summary">Verstecke Low-Priority Benachrichtigungen, wie solche von Google Now.</string>
+    <string name="ad_pocket_mode_title">Taschen Modus</string>
+    <string name="ad_pocket_mode_summary">Zeige Active Display Benachrichtigungen, wenn du das Handy aus deiner Tasche nimmst.</string>
+    <string name="ad_redisplay_title">Benachrichtigungen wiederanzeigen</string>
+    <string name="ad_sunlight_mode_title">Sonnenlicht Modus</string>
+    <string name="ad_sunlight_mode_summary">Invertiere die Farben, wenn du in Umgebungen mit grellem Licht bist.</string>
+    <string name="ad_customizations_title">Anpassungen</string>
+    <string name="ad_brightness_title">Benachrichtigungs Helligkeit</string>
+    <string name="ad_brightness_summary">Helligkeit zum Anzeigen der Benachrichtigungen, falls automatische Helligkeit nicht aktiviert ist.</string>
+    <string name="ad_show_date_title">Zeige Datum</string>
+    <string name="ad_show_date_summary">Anzeigen des Datums über der Uhr.</string>
+    <string name="ad_show_ampm_title">Benutze AM/PM Format</string>
+    <string name="ad_show_ampm_summary">Zeige AM/PM Indikator neben der Uhrzeit.</string>
+    <string name="ad_redisplay_never">Nie</string>
+    <string name="ad_redisplay_1m">1 Minute</string>
+    <string name="ad_redisplay_5m">5 Minuten</string>
+    <string name="ad_redisplay_15m">15 Minuten</string>
+    <string name="ad_redisplay_30m">30 Minuten</string>
+    <string name="ad_redisplay_1h">1 Stunde</string>
+    <string name="ad_redisplay_2h">2 Stunden</string>
+    <string name="ad_redisplay_5h">5 Stunden</string>
+
+    <string name="ad_timeout_title">Display Timeout</string>
+    <string name="ad_timeout_3s">3 Sekunden</string>
+    <string name="ad_timeout_5s">5 Sekunden</string>
+    <string name="ad_timeout_8s">8 Sekunden</string>
+    <string name="ad_timeout_10s">10 Sekunden</string>
+    <string name="ad_timeout_15s">15 Sekunden</string>
+    <string name="ad_timeout_25s">25 Sekunden</string>
+
+    <string name="ad_pocket_mode_off">Aus</string>
+    <string name="ad_pocket_mode_notifications">Nur Benachrichtigungen</string>
+    <string name="ad_pocket_mode_always">Immer</string>
+
+    <string name="ad_config_title">@string/general_configuration</string>
+    <string name="ad_behavior_title">@string/general_behavior</string>
+    <string name="ad_appearance_title">@string/general_appearance</string>
+
+    <string name="ad_excluded_apps_title">Ignorierte Anwendungen</string>
+    <string name="ad_excluded_apps_summary">Ignorierte Anwendungen werden nicht beim Active Display angezeigt.</string>
+
+    <!-- Halo -->
+    <string name="halo">Halo</string>
+    <string name="halo_behavior_title">Halo Verhalten</string>
+    <string name="halo_enable_title">Aktivieren</string>
+    <string name="halo_enable_summary_on">Halo aktiviert</string>
+    <string name="halo_enable_summary_off">Halo deaktiviert</string>
+    <string name="halo_hide_title">Verstecke Halo automatisch</string>
+    <string name="halo_hide_summary">Halo wird sichtbar für eingehende Benachrichtigungen und versteckt sich dann automatisch wieder.</string>
+    <string name="halo_reversed_title">Halo Gesturen umkehren</string>
+    <string name="halo_reversed_summary">Kehrt die Halo Gesturen zum Tasken und Halo verschieben um.</string>
+    <string name="halo_state_title">Halo Richtlinie</string>
+    <string name="halo_state_summary">Benutze Black-/Whitelist für Halo</string>
+    <string name="halo_state_black">Blacklist</string>
+    <string name="halo_state_white">Whitelist</string>
+    <string name="halo_pause_title">Pausiere aktive Anwendung</string>
+    <string name="halo_pause_summary">Wenn eine App mit Halo geöffnet wird, wird die untere App pausiert.</string>
+    <string name="halo_ninja_title">Ninja Modus</string>
+    <string name="halo_ninja_summary">Halo versteckt sich, wenn keine aktiven Benachrichtigungen vorhanden sind.</string>
+    <string name="halo_notification_msgbox_title">Aktiviere Nachricht Popup</string>
+    <string name="halo_notification_msgbox_summary">Zeige Nachrichtenbox für eingehende Benachrichtigungen.</string>
+    <string name="halo_unlock_ping_title">Ping on unlock</string>
+    <string name="halo_unlock_ping_summary">Halo will ping when device is unlocked if new
+        notifications were received</string>
+
+    <!-- Label for are-notifications-enabled checkbox in app details [CHAR LIMIT=20] -->
+    <string name="app_halo_label_black">Blacklist Halo Benachrichtigungen</string>
+    <string name="app_halo_label_white">Whitelist Halo Benachrichtigungen</string>
+
+    <string name="halo_size_title">Halo Größe</string>
+    <string name="halo_size_summary">Definiert, wie groß Halo ist.</string>
+    <string name="halo_size_miniscule">Zwerg</string>
+    <string name="halo_size_small">Klein</string>
+    <string name="halo_size_default">Standard</string>
+    <string name="halo_size_large">Groß</string>
+    <string name="halo_size_gigantic">Gigantisch</string>
+    <string name="halo_size_monster">Monster</string>
+
+    <string name="halo_notification_count_title">Benachrichtigungszähler</string>
+    <string name="halo_notification_count_summary">Zeige Benachrichtigungszähler bei Halo an</string>
+    <string name="halo_notification_count_none">Keiner</string>
+    <string name="halo_notification_count_total">Total</string>
+    <string name="halo_notification_count_individual">Pro App</string>
+    <string name="halo_notification_count_both">Beides</string>
+
+    <string name="halo_msgbox_animation_title">Nachrichtenbox Animationen</string>
+    <string name="halo_msgbox_animation_summary">Halo Nachrichtenbox Animationen für eingehende Benachrichtigungen.</string>
+    <string name="halo_msgbox_animation_none">Keine</string>
+    <string name="halo_msgbox_animation_flip">Flip</string>
+    <string name="halo_config_title">@string/general_configuration</string>
+    <string name="halo_appearance_title">@string/general_appearance</string>
+
+    <!-- Breathing Notifications -->
+    <string name="sms_breath">Atmende SMS</string>
+    <string name="sms_breath_summary">Gibt deinen SMS Benachrichtigungen einen atmenden Effekt.</string>
+    <string name="missed_call_breath">Atmende Anrufe</string>
+    <string name="missed_call_breath_summary">Gibt deinen Vermissten Anruf Benachrichtigungen einen atmenden Effekt.</string>
+
+    <!-- Statusbar -->
+    <string name="status_bar_title">Statusleiste</string>
+    <string name="status_bar_battery_status_bar">Leiste</string>
+    <string name="status_bar_network_title">Netzwerk Verkehr</string>
+    <string name="status_bar_show_network_stats_title">Zeige Netzwerkgeschwindigkeiten</string>
+    <string name="status_bar_network_stats_update_title">Updatefrequenz</string>
+
+    <!-- Lockscreen -->
+    <string name="battery_around_lockscreen_ring">Batteriestatus um Sperrring</string>
+    <string name="status_bar_transparent_on_keyguard_title">Durchsichtige Sperrbildschirm Statusleiste</string>
+    <string name="status_bar_transparent_on_keyguard_summary">Statusleiste am Sperrbildschirm transparent machen.</string>
+
+    <!-- Animation Controls -->
+    <string name="title_animation_controls">Animationen</string>
+    <string name="title_system_animation_controls">System Animationen</string>
+    <string name="activity_open_title">Activity Open Animation</string>
+    <string name="activity_close_title">Activity Close Animation</string>
+    <string name="task_open_title">Task Open Animation</string>
+    <string name="task_close_title">Task Close Animation</string>
+    <string name="task_move_to_front_title">Move To Front Animation</string>
+    <string name="task_move_to_back_title">Move To Back Animation</string>
+    <string name="wallpaper_open_title">Wallpaper Open Animation</string>
+    <string name="wallpaper_close_title">Wallpaper Close Animation</string>
+    <string name="wallpaper_intra_open_title">Wallpaper Intra Open Animation</string>
+    <string name="wallpaper_intra_close_title">Wallpaper Intra Close Animation</string>
+    <string name="animation_duration_title">Animation Duration</string>
+    <string name="title_animation_no_override">Prevent App Overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions.</string>
+    <string name="animation_duration_default">Standard</string>
+
+    <string name="velox_version">Velox Version</string>
+
+    <!-- Show status bar when notification posted -->
+    <string name="show_status_bar_on_notification_title">Zeige bei Benachrichtigungen</string>
+    <string name="show_status_bar_on_notification_summary">Zeige die Statusleiste, wenn eine Benachrichtigung eintrifft und die Statusleiste versteckt ist.</string>
+
+    <!-- Change Log strings -->
+    <string name="changelog_title">View changelog</string>
+    <string name="changelog_loading">Loading changelog\u2026</string>
+    <string name="changelog_error">Unable to load changelog</string>
+    <string name="changelog_unknown">Unknown</string>
+    <string name="changelog_version">Version</string>
+
+    <!-- Performance Settings : 16bpp Alpha -->
+    <string name="pref_use_16bpp_alpha_title">16-Bit Transparenz</string>
+    <string name="pref_use_16bpp_alpha_summary">Bessere Performanze, aber schlechtere Grafik und mögliche Artifakte. (benötigt einen Neustart)</string>
+
+    <!-- Aokp Battery Bar -->
+    <string name="battery_bar">Batterieleisten Position</string>
+    <string name="battery_bar_color">Batterieleisten Farbe</string>
+    <string name="battery_bar_cat">Batterieleisten Optionen</string>
+    <string name="battery_bar_style_title">Batterieleisten Design</string>
+    <string name="battery_bar_thickness_title">Batterieleisten Dicke</string>
+    <string name="battery_bar_animate_title">Ladeanimationen</string>
+    <string name="battery_bar_animate_summary">Die Ladeanimation kann schlechte Benutzererfahrung verursachen. Aktivieren nach eigenem Ermessen!</string>
+    <string name="battery_bar_location_hide">Verstecken</string>
+    <string name="battery_bar_location_statusbar">Statusleiste</string>
+    <string name="battery_bar_location_navtop">Ober der Navigationsleiste</string>
+    <string name="battery_bar_location_navbottom">Unter der Navigationsleiste</string>
+    <string name="battery_bar_style_regular">Normal</string>
+    <string name="battery_bar_style_centermirrored">Zentriert</string>
+
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Farbauswahl</string>
+    <string name="press_color_to_apply">Drücke auf die Farbe zum Übernehmen</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">DUMMY</string>
+    <string name="ics_color">Standard</string>
+
+    <!-- Transparency -->
+    <string name="transparency_dialog_title">Transparenz Einstellungen</string>
+    <string name="transparency_dialog_linked_transparency">Link statusbar &amp; navbar alpha</string>
+    <string name="transparency_dialog_transparency_sb_and_nv">Statusbar and navigation bar</string>
+    <string name="transparency_dialog_statusbar">Statusleiste</string>
+    <string name="transparency_dialog_navbar">Navigation bar</string>
+    <string name="transparency_dialog_match_keyguard_alpha">Match lockscreen alpha</string>
+    <string name="transparency_dialog_transparency">Homescreen alpha</string>
+    <string name="transparency_dialog_transparency_keyguard">Sperrbildschirm Transparenz</string>
+    <string name="transparency_dialog_lockscreen">Sperrbildschirm</string>
+
+    <!-- General -->
+    <string name="title_ui">Allgemeine Benutzeroberfläche</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="ok">OK</string>
+    <string name="save">Speichern</string>
+
+    <!-- ListView animation -->
+    <string name="listview_animation_title">Listen Animation</string>
+    <string name="listview_animations_title">Listen Animationen</string>
+    <string name="listview_off">Standard</string>
+    <string name="listview_wave_left">Welle (links)</string>
+    <string name="listview_wave_right">Welle (rechts)</string>
+    <string name="listview_alpha">Transparenz</string>
+    <string name="listview_scale">Skalieren</string>
+    <string name="listview_stack_top">Stapel (Oben)</string>
+    <string name="listview_stack_bottom">Stapel (Unten)</string>
+    <string name="listview_unfold">Entfalten</string>
+    <string name="listview_fold">Falten</string>
+    <string name="listview_translate_left">Translate (links)</string>
+    <string name="listview_translate_right">Translate (rechts)</string>
+
+    <!-- ListView interpolator -->
+    <string name="listview_interpolator_title">Listen Interpolator</string>
+    <string name="listview_accelerate_interpolator">Beschleunigen</string>
+    <string name="listview_decelerate_interpolator">Bremsen</string>
+    <string name="listview_accelerate_decelerate_interpolator">Beschleunigen und Bremsen</string>
+    <string name="listview_anticipate_interpolator">Anticipate</string>
+    <string name="listview_overshoot_interpolator">Vorbeischießen</string>
+    <string name="listview_anticipate_overshoot_interpolator">Anticipate and Vorbeischießen</string>
+    <string name="listview_bounce_interpolator">Prallen</string>
+
+    <!-- Lockscreen Lid Settings -->
+    <string name="smart_cover_category_title">Smart cover</string>
+    <string name="smart_cover_wake_title">Smart cover wake</string>
+    <string name="smart_cover_wake_summary">Wakeup device when smart cover opens</string>
+
+    <!-- LockScreen Carousel -->
+    <string name="lockscreen_use_widget_container_carousel_title">Use widget carousel</string>
+    <string name="lockscreen_use_widget_container_carousel_summary">Use a carousel animation when switching between lockscreen widgets.</string>
+
+    <!-- dynamic changelog -->
+    <string name="dynamic_changelog_title">Dynamic ChangeLog</string>
+    <string name="dynamic_changelog_summary">Interactive changelog pulled live from github</string>
+    <string name="dynamic_changelog_cat_title">Changelog</string>
+    <string name="changelog_menu_projects_title">View Projects List</string>
+    <string name="changelog_menu_commitlog_title">View Most Recent Commits</string>
+    <string name="button_close">Close</string>
+    <string name="button_webview">WebView</string>
+    <string name="commit_extended_info_title">Extended Commit Info</string>
+    <string name="commit_message">Commit Message</string>
+    <string name="commit_date">Commit Date</string>
+    <string name="commit_sha">Commit SHA-1 Hash</string>
+    <string name="next_commits_page_title">More\u2026</string>
+    <string name="next_commits_page_summary">\u2026display next 30 commits</string>
+    <string name="loading_commits">Loading commits\u2026</string>
+    <string name="commits_title">Commits</string>
+    <string name="loading_projects">Loading projects list\u2026</string>
+    <string name="org_projects">Organization projects</string>
+    <string name="author_title">Author</string>
+    <string name="commit_committer_title">Committer</string>
+    <string name="sort_commits_title">Sort</string>
+    <string name="sort_commits_message">Commits are now in order by repository, would you like to sort them by date regardless of which repository in which they exist?</string>
+    <string name="button_sort">Sort by date</string>
+    <string name="button_donot_sort">Do not sort</string>
+    <string name="unknown_author">Unknown Author</string>
+    <string name="unknown_committer">Unknown Committer</string>
+    <string name="toast_commitlog_info" formatted="false">Found %d commits in %d seconds</string>
+    <string name="changelog_favorite_cat_title">Favorited Projects</string>
+    <string name="changelog_add_to_favs_list">Add</string>
+    <string name="changelog_view_commits">View commits</string>
+    <string name="add_favs_or_view">Add to favorites list or view commits?</string>
+    <string name="remove_favs_or_view">Remove from favorites list or view commits?</string>
+    <string name="changelog_remove_from_favs_list">Remove</string>
+
+    <!-- Notification Drawer Style -->
+    <string name="notification_style_title">Benachrichtigungs Hintergrund</string>
+    <string name="notification_style_summary">Ändere den Hintergrund des Benachrichtigungsschirmes.</string>
+
+    <!-- Notification drawer background -->
+    <string name="notification_wallpaper_title">@string/notification_style_title</string>
+    <string name="notification_wallpaper_landscape_title">Horizontalmodus Hintergrund</string>
+    <string name="notification_background_custom_image">Bild</string>
+    <string name="notification_background_default_wallpaper">Standard Hintergrund</string>
+    <string name="notif_wallpaper_alpha_title">Transparenz des Benachrichtigungs Hintergrundes</string>
+    <string name="notif_alpha_title">Transparenz der Benachrichtigungs Elemente</string>
+
+</resources>

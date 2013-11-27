@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/tools_tasker_optimization_title">
+
+    <PreferenceCategory android:title="@string/tools_tasker_optimization_filesystem_title" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider android:title="@string/empty_string" />
+
+    <PreferenceCategory android:title="@string/tools_tasker_optimization_filesystem_fstrim_cat_title">
+
+        <SwitchPreference
+            android:title="@string/tools_tasker_optimization_filesystem_fstrim_title"
+            android:summaryOn="@string/tools_tasker_optimization_filesystem_fstrim_summary_on"
+            android:summaryOff="@string/tools_tasker_optimization_filesystem_fstrim_summary_off"
+            android:key="tasker_tools_fstrim" />
+
+        <ListPreference
+            android:title="@string/tools_tasker_optimization_filesystem_fstrim_interval_title"
+            android:entryValues="@array/tools_tasker_fstrim_values"
+            android:entries="@array/tools_tasker_fstrim_entries"
+            android:summary="@string/tools_tasker_optimization_filesystem_fstrim_interval_summary"
+            android:dependency="tasker_tools_fstrim"
+            android:key="tasker_tools_fstrim_interval" />
+
+    </PreferenceCategory>
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider android:title="@string/empty_string" />
+
+</PreferenceScreen>

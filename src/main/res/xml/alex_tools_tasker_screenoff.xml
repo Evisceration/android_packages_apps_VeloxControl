@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/tools_tasker_screenoff_title">
+
+    <SwitchPreference
+        android:title="@string/tools_tasker_screenoff_title"
+        android:summary="@string/tools_tasker_screenoff_summary"
+        android:key="tools_tasker_screenoff" />
+
+    <net.openfiretechnologies.veloxcontrol.widgets.PreferenceDivider android:title="@string/empty_string" />
+
+    <SwitchPreference
+        android:dependency="tools_tasker_screenoff"
+        android:title="@string/tools_tasker_screenoff_internet_title"
+        android:summaryOn="@string/tools_tasker_screenoff_internet_summary_on"
+        android:summaryOff="@string/tools_tasker_screenoff_internet_summary_off"
+        android:key="tools_tasker_screenoff_internet" />
+
+</PreferenceScreen>

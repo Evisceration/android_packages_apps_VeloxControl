@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/general_appearance">
+
+    <PreferenceScreen
+        android:title="@string/title_ui"
+        android:icon="@drawable/ic_general_ui"
+        android:key="alex_appearance_general_ui" />
+
+    <PreferenceScreen
+        android:title="@string/title_animation_controls"
+        android:icon="@drawable/ic_animations"
+        android:key="alex_appearance_animations" />
+
+    <PreferenceScreen
+        android:title="@string/status_bar_title"
+        android:icon="@drawable/empty_icon"
+        android:key="alex_appearance_statusbar" />
+
+    <PreferenceScreen
+        android:title="@string/alex_lockscreen_category_title"
+        android:icon="@drawable/ic_settings_lockscreen"
+        android:key="alex_lockscreen" />
+
+    <PreferenceScreen
+        android:title="@string/alex_graphics_performance_category_title"
+        android:icon="@drawable/ic_settings_performance"
+        android:key="alex_appearance_performance" />
+
+</PreferenceScreen>

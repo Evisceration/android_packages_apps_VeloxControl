@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General -->
+    <string name="general_appearance">Aussehen</string>
+    <string name="general_configuration">Konfiguration</string>
+    <string name="general_behavior">Verhalten</string>
+    <string name="general_extras">Extras</string>
+    <string name="general_about">Über</string>
+    <string name="general_tools">Werkzeuge</string>
+    <string name="general_settings">Einstellungen</string>
+    <string name="general_close">Schließen</string>
+
+    <!-- Dialogs -->
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="wait">Bitte warten...</string>
+
+    <!-- Drawer -->
+    <string name="drawer_open">Öffne Navigation</string>
+    <string name="drawer_close">Schliesse Navigation</string>
+
+    <!-- Actions -->
+    <string name="action_toggle">Umschalten</string>
+    <string name="action_tabs">Tabs</string>
+    <string name="action_press_again">Erneut drücken zum Beenden!</string>
+
+    <!-- Tools -->
+    <string name="tools_fonts_title">Schriftarten</string>
+    <string name="tools_fonts_summary">Ändere deine Systemschriftart.\n\nWähle aus, welche Schriftart du ändern möchtest!\n(Lade die Schriftart vorher als .ttf auf dein Handy / deine SD-Karte)</string>
+    <string name="tools_backup_title">Sicherungen</string>
+    <string name="tools_backup_summary">Sichere ROM Einstellungen, Apps und mehr!</string>
+    <string name="tools_backup_extendedsummary">Willkommen zum <b><i>Velox Control Sicherungs Tool</i></b>!\n\nFunctionality comming soon!</string>
+
+    <!-- Font Tools -->
+    <string name="tools_fonts_robotoregular_summary">Die normale Standard Systemschriftart.</string>
+    <string name="tools_fonts_robotobold_summary">Die dicke Standard Systemschriftart.</string>
+    <string name="flash_font_info">wird installiert als \n%s\n</string>
+    <string name="flash_font_info_done">Schriftart erfolgreich installiert!\nEin Neustart wird empfohlen!</string>
+
+    <!-- Flasher Tools -->
+    <string name="tools_flasher_title">Flasher</string>
+    <string name="tools_flasher_summary">Installiere deine Lieblings Recovery!</string>
+
+    <!-- Backup Tools -->
+    <string name="tools_backup_autobackup_title">Autosicherung</string>
+    <string name="tools_backup_autobackup_on">Sichere Änderungen automatisch.</string>
+    <string name="tools_backup_autobackup_off">Sichere Änderungen nicht automatisch.</string>
+    <string name="tools_backup_autobackup_list_title">Autosicherungs Liste</string>
+    <string name="tools_backup_autobackup_list_summary">Liste der Einstellungen, welche automatisch gesichert werden sollen.</string>
+
+    <!-- Velox Control Preferences -->
+    <string name="vc_extensive_logging_title">Protokollieren</string>
+    <string name="vc_extensive_logging_summary">Zeigt Debug Nachrichten im LogCat an.</string>
+
+</resources>
