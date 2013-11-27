@@ -1,3 +1,3 @@
 VeloxControl
 =====================
-Branch for Kitkat
+Master Branch
