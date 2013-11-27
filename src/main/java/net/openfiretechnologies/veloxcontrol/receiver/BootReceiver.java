@@ -21,7 +21,7 @@ public class BootReceiver extends BroadcastReceiver implements VeloxConstants {
         // Set SELinux Permissive
         if (mPrefs.getBoolean(VC_OS_DISABLE_SELINUX)) {
             Shell.SU.run("setenforce 0");
-            VeloxMethods.logDebug("setenforce 0", true);
+            VeloxMethods.logDebug("setenforce 0", mPrefs.getBoolean(VC_EXTENSIVE_LOGGING));
         }
 
         // Start Tasker Service
