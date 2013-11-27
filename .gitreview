@@ -2,4 +2,4 @@
 host=gerrit.openfire-technologies.net
 port=29418
 project=android_packages_apps_VeloxControl.git
-defaultbranch=master
+defaultbranch=kitkat
